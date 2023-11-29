@@ -6,7 +6,7 @@ trellis = poly2trellis(7, [171 133]);
 k = log2(trellis.numInputSymbols);
 % n is the number of output streams
 n = log2(trellis.numOutputSymbols);
-numSymPerFrame = 600;
+numSymPerFrame = 12000;
 
 % generate random binary message with length k*number of symbols per frame
 msg = randi([0 1], k*numSymPerFrame, 1);
@@ -44,6 +44,7 @@ xlabel('Eb/No (dB)');
 ylabel('BER');
 title('Convolutional Codes');
 legend({'R = 1/2 Coding','Uncoded'},'Location','northeast')
+
 
 
 
